@@ -4,7 +4,7 @@
 \alias{read_labelled}
 \title{Imports Data Frame from Excel File with Variable and Value Labels}
 \usage{
-read_labelled(file, data.sheet = 1, vars.sheet = 2)
+read_labelled(file, data.sheet = 1, vars.sheet = 2, ...)
 }
 \arguments{
 \item{file}{Excel workbook with two sheets: for data and dictionary}
@@ -12,6 +12,8 @@ read_labelled(file, data.sheet = 1, vars.sheet = 2)
 \item{data.sheet}{Name or number of sheet that contains data}
 
 \item{vars.sheet}{Name or number of sheet that contains data dictionary}
+
+\item{...}{Additional parameters to readxl::read_excel() function}
 }
 \description{
 Imports Data Frame from Excel File with Variable and Value Labels

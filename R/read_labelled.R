@@ -2,6 +2,7 @@
 #' @param file Excel workbook with two sheets: for data and dictionary
 #' @param data.sheet Name or number of sheet that contains data
 #' @param vars.sheet Name or number of sheet that contains data dictionary
+#' @param ... Additional parameters to readxl::read_excel() function
 #' @examples
 #' # read_labelled("example.xlsx")
 #' # read_labelled("example.xlsx", "Data View", "Variable View")
