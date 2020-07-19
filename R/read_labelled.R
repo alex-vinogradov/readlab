@@ -12,7 +12,11 @@
 #' @export
 read_labelled <- function(file, data.sheet = 1, vars.sheet = 2, ...) {
   data <- read_excel(file, sheet = data.sheet, ...)
-  vars <- read_excel(file, sheet = vars.sheet)
+  if ("tbl" %in% class(vars.sheet)) {
+    vars <- vars.sheet
+  } else {
+    vars <- read_excel(file, sheet = vars.sheet)
+  }
 
   if (!"variable" %in% names(vars)) stop("There is no 'variable' column in dictionary", call. = FALSE)
   if (!"label" %in% names(vars)) stop("There is no 'label' column in dictionary", call. = FALSE)
