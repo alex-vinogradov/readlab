@@ -1,0 +1,15 @@
+Package: readlab
+Type: Package
+Title: Imports Labelled Data
+Version: 0.1.0
+Author: Alexander Vinogradov
+Maintainer: Alex Vinogradov <a.g.vinogradov@knu.ua>
+Description: Reads data frame from Excel workbook, where one 
+    list contains data, and other -- data dictionary.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: haven,
+    jsonlite,
+    readxl
+RoxygenNote: 7.1.0
